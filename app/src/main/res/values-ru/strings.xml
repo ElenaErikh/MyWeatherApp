@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Weather App</string>
+    <string name="button_text">Нажми меня!</string>
+    <string name="weather_text">Здесь будет супер погодное приложение!</string>
+</resources>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Weather App</string>
-    <string name="button_text">Button</string>
+    <string name="button_text">Press me!</string>
+    <string name="weather_text">Here will be a super weather app!</string>
 </resources>
