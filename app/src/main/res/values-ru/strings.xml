@@ -1,5 +1,33 @@
 <resources>
     <string name="app_name">My Weather App</string>
-    <string name="button_text">Нажми меня!</string>
-    <string name="weather_text">Здесь будет супер погодное приложение!</string>
+    <string name="temperature_text">Здесь всегда +25</string>
+    <string name="usercity">город пользователя</string>
+    <string name="ok">OK</string>
+    <string name="wind_speed">показывать скорость ветра</string>
+    <string name="atmospheric_pressure">показывать атмосферное давление</string>
+    <string name="enter_date">введите текущую дату</string>
+    <string name="enter_time">введите текущее время</string>
+    <string name="choose_your_city">Выберите город:</string>
+    <string-array name="cities">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Новосибирск</item>
+        <item>Екатеринбург</item>
+        <item>Самара</item>
+        <item>Ростов-на-Дону</item>
+        <item>Краснодар</item>
+        <item>Уфа</item>
+        <item>Саратов</item>
+        <item>Воронеж</item>
+        <item>Лондон</item>
+        <item>Нью-Йорк</item>
+        <item>Дели</item>
+        <item>Токио</item>
+        <item>Хельсинки</item>
+        <item>Катманду</item>
+        <item>Оттава</item>
+        <item>Бангкок</item>
+    </string-array>
+
+
 </resources>

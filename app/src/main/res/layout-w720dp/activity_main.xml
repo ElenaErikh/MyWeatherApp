@@ -7,44 +7,83 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/temperature_text"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/sun"
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/sun"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306"
-        tools:text="@string/weather_text" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="128dp"
-        android:layout_height="49dp"
-        android:text="@string/button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.465"/>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="118dp"
-        android:layout_height="106dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:id="@+id/sun"
+        android:layout_width="116dp"
+        android:layout_height="88dp"
+        android:contentDescription="@string/temperature_text"
+        android:src="@drawable/sun_1"
+        app:layout_constraintBottom_toTopOf="@+id/temperature"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204"
-        android:contentDescription="@string/weather_text"
-        android:src="@drawable/sun_1" />
+        app:layout_constraintTop_toBottomOf="@+id/userCity"
+        app:layout_constraintVertical_bias="0.846" />
 
+    <TextView
+        android:id="@+id/userCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/usercity"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/sun"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/sun"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="155dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/enter_time"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userCity" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="155dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/enter_date"
+        android:inputType="date"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toEndOf="@+id/editTextTime"
+        app:layout_constraintTop_toBottomOf="@+id/userCity" />
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="325dp"
+        android:layout_height="184dp"
+        android:src="@drawable/a_field"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sun"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="@+id/sun"
+        app:layout_constraintTop_toBottomOf="@+id/temperature"
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

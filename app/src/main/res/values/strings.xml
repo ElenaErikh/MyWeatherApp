@@ -1,5 +1,31 @@
 <resources>
     <string name="app_name">My Weather App</string>
-    <string name="button_text">Press me!</string>
-    <string name="weather_text">Here will be a super weather app!</string>
+    <string name="temperature_text">Here is always +25</string>
+    <string name="usercity">userCity</string>
+    <string name="ok">OK</string>
+    <string name="wind_speed">show wind speed</string>
+    <string name="atmospheric_pressure">show atmospheric pressure</string>
+    <string name="enter_date">enter current date</string>
+    <string name="enter_time">enter current time</string>
+    <string name="choose_your_city">Choose a city:</string>
+    <string-array name="cities">
+        <item>Moscow</item>
+        <item>Saint Petersburg</item>
+        <item>Novosibirsk</item>
+        <item>Yekaterinburg</item>
+        <item>Samara</item>
+        <item>Rostov-on-Don</item>
+        <item>Krasnodar</item>
+        <item>Ufa</item>
+        <item>Saratov</item>
+        <item>Voronezh</item>
+        <item>London</item>
+        <item>New York</item>
+        <item>New Delhi</item>
+        <item>Tokio</item>
+        <item>Helsinki</item>
+        <item>Kathmandu</item>
+        <item>Ottava</item>
+        <item>Bangkok</item>
+    </string-array>
 </resources>

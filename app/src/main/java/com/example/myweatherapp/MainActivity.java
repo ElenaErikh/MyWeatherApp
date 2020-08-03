@@ -17,23 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
-        setOnBtnClickBehaviour();
     }
 
-    private void initViews(){
-        button = findViewById(R.id.button);
-        textView = findViewById(R.id.textView);
-    }
-
-    private void setOnBtnClickBehaviour(){
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                textView.setText(R.string.weather_text);
-                int color = ContextCompat.getColor(getApplicationContext(), R.color.colorAccent);
-                textView.setTextColor(color);
-            }
-        });
-    }
 }
