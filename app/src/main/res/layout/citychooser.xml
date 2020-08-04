@@ -9,8 +9,8 @@
         android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="164dp"
         android:text="@string/ok"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,32 +33,30 @@
         android:id="@+id/windSpeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="328dp"
+        android:layout_marginTop="200dp"
         android:text="@string/wind_speed"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/pressure"
+        app:layout_constraintStart_toStartOf="@+id/spinnerChooseCity"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/pressure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
         android:layout_marginTop="48dp"
         android:text="@string/atmospheric_pressure"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/windSpeed"
         app:layout_constraintTop_toBottomOf="@+id/windSpeed" />
 
     <TextView
         android:id="@+id/select_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
         android:text="@string/choose_your_city"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerChooseCity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spinnerChooseCity"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

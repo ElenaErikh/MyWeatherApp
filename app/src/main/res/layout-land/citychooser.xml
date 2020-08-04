@@ -9,32 +9,33 @@
         android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="152dp"
         android:text="@string/ok"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/spinnerChooseCity"
         app:layout_constraintTop_toTopOf="@+id/spinnerChooseCity" />
 
     <Spinner
         android:id="@+id/spinnerChooseCity"
-        android:layout_width="374dp"
-        android:layout_height="45dp"
+        android:layout_width="356dp"
+        android:layout_height="37dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="1dp"
         android:entries="@array/cities"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/windSpeed"
-        android:layout_width="127dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="212dp"
+        android:layout_width="184dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="128dp"
         android:text="@string/wind_speed"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/spinnerChooseCity"
@@ -42,9 +43,9 @@
 
     <CheckBox
         android:id="@+id/pressure"
-        android:layout_width="197dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="@string/atmospheric_pressure"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/spinnerChooseCity"
@@ -58,9 +59,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/spinnerChooseCity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinnerChooseCity"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintVertical_bias="0.675" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
