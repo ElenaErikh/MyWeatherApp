@@ -23,8 +23,8 @@
 
     <ImageView
         android:id="@+id/sun"
-        android:layout_width="114dp"
-        android:layout_height="76dp"
+        android:layout_width="134dp"
+        android:layout_height="99dp"
         android:contentDescription="@string/temperature_text"
         android:src="@drawable/sun_1"
         app:layout_constraintBottom_toTopOf="@+id/temperature"
@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userCity"
-        app:layout_constraintVertical_bias="0.854" />
+        app:layout_constraintVertical_bias="0.921" />
 
     <TextView
         android:id="@+id/userCity"
@@ -48,8 +48,8 @@
 
     <EditText
         android:id="@+id/editTextTime"
-        android:layout_width="150dp"
-        android:layout_height="37dp"
+        android:layout_width="136dp"
+        android:layout_height="47dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:ems="10"
@@ -61,22 +61,23 @@
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="136dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/enter_date"
         android:importantForAutofill="no"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toEndOf="@+id/editTextTime"
         app:layout_constraintTop_toBottomOf="@+id/userCity" />
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="340dp"
-        android:layout_height="194dp"
+        android:layout_width="366dp"
+        android:layout_height="318dp"
+        android:scaleType="fitXY"
         android:src="@drawable/a_field"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/sun"
@@ -84,5 +85,27 @@
         app:layout_constraintTop_toBottomOf="@+id/temperature"
         app:layout_constraintVertical_bias="0.498"
         tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/windSpeed_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/windSpeed_textview"
+        app:layout_constraintEnd_toStartOf="@+id/sun"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+
+    <TextView
+        android:id="@+id/atmospheric_pressure_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/atmospheric_pressure_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sun"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

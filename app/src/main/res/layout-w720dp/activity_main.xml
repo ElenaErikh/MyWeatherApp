@@ -51,32 +51,31 @@
         android:layout_width="155dp"
         android:layout_height="46dp"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/enter_time"
         android:importantForAutofill="no"
         android:inputType="time"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userCity" />
+        app:layout_constraintTop_toTopOf="@+id/userCity" />
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="155dp"
         android:layout_height="49dp"
-        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/enter_date"
-        android:inputType="date"
         android:importantForAutofill="no"
+        android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toEndOf="@+id/editTextTime"
-        app:layout_constraintTop_toBottomOf="@+id/userCity" />
+        app:layout_constraintTop_toTopOf="@+id/userCity" />
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="325dp"
-        android:layout_height="184dp"
+        android:layout_width="618dp"
+        android:layout_height="175dp"
+        android:scaleType="fitXY"
         android:src="@drawable/a_field"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/sun"
@@ -85,5 +84,26 @@
         app:layout_constraintTop_toBottomOf="@+id/temperature"
         app:layout_constraintVertical_bias="0.333"
         tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/windSpeed_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/windSpeed_textview"
+        app:layout_constraintEnd_toStartOf="@+id/sun"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+
+    <TextView
+        android:id="@+id/atmospheric_pressure_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/atmospheric_pressure_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sun"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
