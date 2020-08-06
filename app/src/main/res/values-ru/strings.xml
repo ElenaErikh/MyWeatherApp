@@ -1,15 +1,12 @@
 <resources>
     <string name="app_name">My Weather App</string>
     <string name="temperature_text">+25°C</string>
-    <string name="usercity">город пользователя</string>
     <string name="ok">OK</string>
     <string name="wind_speed">показывать скорость ветра</string>
     <string name="atmospheric_pressure">показывать атмосферное давление</string>
     <string name="enter_date">введите дату</string>
     <string name="enter_time">введите время</string>
     <string name="choose_your_city">Выберите город:</string>
-    <string name="windSpeed_textview">Скорость ветра: 3 м/с</string>
-    <string name="atmospheric_pressure_textview" >Давление: 1019 hPa</string>
     <string name="changeTemperatureBtn">Менять°C</string>
     <string-array name="cities">
         <item>Москва</item>
