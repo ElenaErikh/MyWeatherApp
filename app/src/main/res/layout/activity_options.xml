@@ -4,27 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnOK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="164dp"
-        android:text="@string/ok"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerChooseCity" />
-
     <Spinner
         android:id="@+id/spinnerChooseCity"
-        android:layout_width="374dp"
-        android:layout_height="45dp"
+        android:layout_width="295dp"
+        android:layout_height="38dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="112dp"
         android:layout_marginEnd="1dp"
         android:entries="@array/cities"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.412"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +41,8 @@
         android:id="@+id/select_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="72dp"
         android:text="@string/choose_your_city"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/spinnerChooseCity"

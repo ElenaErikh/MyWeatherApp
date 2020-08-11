@@ -1,6 +1,7 @@
 package com.example.myweatherapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView windSpeedView;
     private TextView atmPressureView;
 
+    private final int requestCode = 11998;
     private static final String TAG = "myLogs";
 
     @Override
@@ -29,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         findViews();
         setOnClickToOptionsView();
-        showDataFromOptionsActivity();
     }
 
     private void findViews(){
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, requestCode);
                 Log.d(TAG, "launch OptionsActivity");
             }
         });
@@ -99,14 +100,21 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onDestroy");
     }
 
-    private void showDataFromOptionsActivity(){
-        String data = getIntent().getStringExtra(OptionsActivity.dataKey);
-        userCity.setText(data);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-        String windData = getIntent().getStringExtra(OptionsActivity.dataKeyWind);
-        windSpeedView.setText(windData);
+        if(requestCode == this.requestCode && resultCode == RESULT_OK && data != null) {
+            String cityData = data.getStringExtra(OptionsActivity.dataKey);
+            userCity.setText(cityData);
 
-        String pressureData = getIntent().getStringExtra(OptionsActivity.dataKeyPressure);
-        atmPressureView.setText(pressureData);
+            String windData = data.getStringExtra(OptionsActivity.dataKeyWind);
+            windSpeedView.setText(windData);
+
+            String pressureData = data.getStringExtra(OptionsActivity.dataKeyPressure);
+            atmPressureView.setText(pressureData);
+        }
     }
+
 }
+

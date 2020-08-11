@@ -19,7 +19,6 @@ public class OptionsActivity extends AppCompatActivity {
     final static String dataKey = "dataKey";
     final static String dataKeyWind = "dataKeyWind";
     final static String dataKeyPressure = "dataKeyPressure";
-    private Button btnOK;
     private Spinner spinnerChooseCity;
     private CheckBox windSpeed;
     private CheckBox pressure;
@@ -30,11 +29,9 @@ public class OptionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_options);
         findViews();
         showBackBtn();
-        setOnClickToBtnOK();
     }
 
     private void findViews(){
-        btnOK = findViewById(R.id.btnOK);
         spinnerChooseCity = findViewById(R.id.spinnerChooseCity);
         windSpeed = findViewById(R.id.windSpeed);
         pressure = findViewById(R.id.pressure);
@@ -48,32 +45,21 @@ public class OptionsActivity extends AppCompatActivity {
         }
     }
 
-    private void setOnClickToBtnOK() {
-        btnOK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(OptionsActivity.this, MainActivity.class);
-
-                String userCity = spinnerChooseCity.getSelectedItem().toString();
-                intent.putExtra(dataKey, userCity);
-
-                if (windSpeed.isChecked()){
-                    String wind = "Wind speed: 3 m/s";
-                    intent.putExtra(dataKeyWind, wind);
-                }
-                if (pressure.isChecked()){
-                    String pressure = "Pressure: 1019 hPa";
-                    intent.putExtra(dataKeyPressure, pressure);
-                }
-
-                startActivity(intent);
-            }
-        });
-    }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == android.R.id.home){
+            Intent dataIntent = new Intent();
+            String strCity = spinnerChooseCity.getSelectedItem().toString();
+            dataIntent.putExtra(dataKey, strCity);
+            if (windSpeed.isChecked()){
+                String wind = "Wind speed: 3 m/s";
+                dataIntent.putExtra(dataKeyWind, wind);
+            }
+            if (pressure.isChecked()){
+                String pressure = "Pressure: 1019 hPa";
+                dataIntent.putExtra(dataKeyPressure, pressure);
+            }
+            setResult(RESULT_OK, dataIntent);
             finish();
         }
         return true;
